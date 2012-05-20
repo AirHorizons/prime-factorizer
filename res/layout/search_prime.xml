@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/RL_prime"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center" >
+        
+         <LinearLayout
+            android:id="@+id/LL3_prime"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+        <TextView
+                android:id="@+id/textView2_prime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="2dp"                
+                android:text="숫자를 입력하세요"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <LinearLayout
+            android:id="@+id/LL2_prime"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView2_prime"
+            android:gravity="center"
+            android:orientation="horizontal" >
+            
+            <Button
+                android:id="@+id/ClearInputText_prime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="mOnClick_prime_clear"
+                android:text="Clear" />
+            <EditText
+                android:id="@+id/inputValue_prime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView2_prime"
+                android:ems="10"
+                android:inputType="number"
+                android:maxLength="9" >
+
+                
+            </EditText>
+
+            <Button
+                android:id="@+id/button1_prime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/inputValue_prime"
+                android:onClick="mOnClick_prime"
+                android:text="찾기" />
+            </LinearLayout>
+
+            <ScrollView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_below="@+id/LL2_prime" >
+
+                <TextView
+                    android:id="@+id/resultValue_prime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    
+                    android:text=""
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+            </ScrollView>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar1_prime"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:visibility="gone" />
+
+</LinearLayout>
