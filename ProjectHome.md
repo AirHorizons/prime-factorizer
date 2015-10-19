@@ -1,0 +1,1 @@
+seek prime number & prime factor
